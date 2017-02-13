@@ -5,5 +5,27 @@
     </head>
     <body>
         <h1>Queen Attack</h1>
+
+        <form action='/queen_attack' method='post'>
+            <label>Start
+                <label>x:
+                    <input name='start-x' type='text'>
+                </label>
+                <label>y:
+                    <input name='start-y' type='text'>
+                </label>
+            </label>
+
+            <label>End
+                <label>x:
+                    <input name='end-x' type='text'>
+                </label>
+                <label>y:
+                    <input name='end-y' type='text'>
+                </label>
+            </label>
+
+            <button type='submit'>Check attack</button>
+        </form>
     </body>
 </html>

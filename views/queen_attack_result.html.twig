@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Queen attack</title>
+    </head>
+    <body>
+        <h1>Queen Attack</h1>
+
+        {% if start.attack(end) %}
+            <p>Can attack</p>
+        {% else %}
+            <p>Cannot attack</p>
+        {% endif %}
+        <a href='/'>Back</a>
+    </body>
+</html>
