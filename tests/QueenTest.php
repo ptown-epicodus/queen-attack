@@ -28,5 +28,31 @@
             //Assert
             $this->assertEquals(true, $result);
         }
+
+        function test_attack_vertically()
+        {
+            //Arrange
+            $test_Queen = new Queen;
+            $input = array(array(1, 2), array(1, 5));
+
+            //Act
+            $result = $test_Queen->attack($input);
+
+            //Assert
+            $this->assertEquals(true, $result);
+        }
+
+        function test_attack_diagonally()
+        {
+            //Arrange
+            $test_Queen = new Queen;
+            $input = array(array(3, 3), array(5, 1));
+
+            //Act
+            $result = $test_Queen->attack($input);
+
+            //Assert
+            $this->assertEquals(true, $result);
+        }
     }
 ?>
