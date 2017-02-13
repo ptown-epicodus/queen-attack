@@ -39,7 +39,7 @@ JSON
 
 |Behavior|Input|Output|
 |--------|-----|------|
-|Queen able to attack own coordinates.|(1,2),(1,2)|false|
+|Queen not able to attack own coordinates.|(1,2),(1,2)|false|
 |Queen able to attack horizontally.|(1,2),(4,2)|true|
 |Queen able to attack vertically.|(1,2),(1,5)|true|
 |Queen able to attack diagonally.|(1,2),(2,3)|true|
