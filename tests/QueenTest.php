@@ -54,5 +54,18 @@
             //Assert
             $this->assertEquals(true, $result);
         }
+
+        function test_attack_elsewhere()
+        {
+            //Arrange
+            $test_Queen = new Queen;
+            $input = array(array(1, 2), array(3, 3));
+
+            //Act
+            $result = $test_Queen->attack($input);
+
+            //Assert
+            $this->assertEquals(false, $result);
+        }
     }
 ?>
