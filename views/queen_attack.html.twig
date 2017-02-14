@@ -1,31 +1,201 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        <link href='css/styles.css' rel='stylesheet' type='text/css'>
+        <script src='js/jquery-3.1.1.min.js'></script>
+        <script src='js/scripts.js'></script>
         <title>Queen attack</title>
     </head>
     <body>
-        <h1>Queen Attack</h1>
+        <div class='container'>
+            <h1>Queen Attack</h1>
 
-        <form action='/queen_attack' method='post'>
-            <label>Start
-                <label>x:
-                    <input name='start-x' type='text'>
+            <form action='/attack' method='post'>
+                <label>Start
+                    <label>x:
+                        <input name='start-x' type='text'>
+                    </label>
+                    <label>y:
+                        <input name='start-y' type='text'>
+                    </label>
                 </label>
-                <label>y:
-                    <input name='start-y' type='text'>
-                </label>
-            </label>
 
-            <label>End
-                <label>x:
-                    <input name='end-x' type='text'>
+                <label>End
+                    <label>x:
+                        <input name='end-x' type='text'>
+                    </label>
+                    <label>y:
+                        <input name='end-y' type='text'>
+                    </label>
                 </label>
-                <label>y:
-                    <input name='end-y' type='text'>
-                </label>
-            </label>
 
-            <button type='submit'>Check attack</button>
-        </form>
+                <button type='submit'>Check attack</button>
+            </form>
+
+            <div id='board'>
+                <div id='row-0' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-1' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-2' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-3' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-4' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-5' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-6' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+                <div id='row-7' class='row'>
+                    <div class='col-md-1 col-0 space'>
+                    </div>
+                    <div class='col-md-1 col-1 space'>
+                    </div>
+                    <div class='col-md-1 col-2 space'>
+                    </div>
+                    <div class='col-md-1 col-3 space'>
+                    </div>
+                    <div class='col-md-1 col-4 space'>
+                    </div>
+                    <div class='col-md-1 col-5 space'>
+                    </div>
+                    <div class='col-md-1 col-6 space'>
+                    </div>
+                    <div class='col-md-1 col-7 space'>
+                    </div>
+                    <div class='col-md-4 spare'>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>

@@ -13,7 +13,7 @@
         return $app['twig']->render('queen_attack.html.twig');
     });
 
-    $app->post('/queen_attack', function() use ($app) {
+    $app->post('/attack', function() use ($app) {
         $queen = new Queen($_POST['start-x'], $_POST['start-y']);
         $end = array($_POST['end-x'], $_POST['end-y']);
 

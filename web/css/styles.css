@@ -1,0 +1,13 @@
+#board .row {
+    height: 80px;
+}
+
+.space {
+    border: solid 1px black;
+    height: 100%;
+    background-color: gray;
+}
+
+.piece {
+    background-color: blue;
+}

@@ -25,6 +25,10 @@ CSS
 
 Bootstrap
 
+JavaScript
+
+jQuery
+
 PHP
 
 Silex
